@@ -1,0 +1,11 @@
+
+version: '3.0'
+
+services:
+  haproxy:
+    restart: always
+    image: haproxy:2.1.3-alpine
+    ports:
+      - 6000:6000
+    volumes:
+      - ./conf:/usr/local/etc/haproxy:ro
